@@ -1,0 +1,93 @@
+.chapter-number {
+	font-family: "Times New Roman", Times, serif;
+	font-size: 17px;
+	line-height: 0.95em;
+	color: #000;
+	text-align: left;
+	display: inline;
+	margin: 0px;
+	padding-top: 0px;
+	padding-right: 0px;
+	padding-bottom: 0.50em;
+	padding-left: 0px;
+}
+.chapter-title {
+	font-family: "Times New Roman", Times, serif;
+	font-size: 24px;
+	line-height: 0.85em;
+	text-align: left;
+	display: block;
+	padding: 0px;
+	margin-top: .25em;
+	margin-right: 0em;
+	margin-bottom: .25em;
+	margin-left: 0em;
+}
+.caption {
+	font-family: "Times New Roman", Times, serif;
+	font-size: 14px;
+	font-style: italic;
+	font-variant: normal;
+	color: #000;
+	text-align: center;
+	white-space: normal;
+	display: block;
+	position: relative;
+	margin: 4px;
+	padding: 4px;
+}
+.body-style {
+	font-family: "Times New Roman", Times, serif;
+	text-align: justify;
+	text-indent: 1.25em;
+	color: #000;
+	white-space: normal;
+	display: block;
+}
+.rule142 {
+	text-align: center;
+	padding: 13px;
+	clear: both;
+	height: 75%;
+	width: 100%;
+	font-family: "Times New Roman", Times, serif;
+	font-size: 14px;
+	margin-top: 13px;
+	margin-right: 13px;
+	margin-bottom: 13px;
+	margin-left: 13px;
+}
+.copyright {
+	text-align: center;
+	padding: 13px;
+	clear: both;
+	height: 60%;
+	width: 100%;
+	font-family: "Times New Roman", Times, serif;
+	font-size: 14px;
+	margin-top: 300px;
+	margin-right: 13px;
+	margin-bottom: 13px;
+	margin-left: 13px;
+}
+.Title-Main {
+	font-family: "Times New Roman", Times, serif;
+	font-size: 36px;
+	font-style: normal;
+	line-height: 1.25em;
+	font-weight: 200;
+	text-align: center;
+	display: block;
+}
+.byauthor {
+	font-family: "Times New Roman", Times, serif;
+	font-size: 24px;
+	font-style: normal;
+	line-height: 2em;
+	font-weight: bold;
+	color: #666;
+	text-align: center;
+	vertical-align: top;
+	display: block;
+}
+
