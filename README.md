@@ -52,26 +52,26 @@ mv contents of skeleton directory into dir without moving OEBPS
 
 edit each chapter xhtml by hand in xhtml with the following
 
-<p class="body-style">Chapter One</p>
+p class="body-style">Chapter One
 
 Change to:
 
-<p class="chapter-number">Chapter One</p>
+class="chapter-number">Chapter One
 
 And. . .
 
-<p class="body-style">The Long Road Home</p>
+class="body-style">The Long Road Home
 
 Change to:
 
-<p class="chapter-title">The Long Road Home</p>
+class="chapter-title">The Long Road Home
 
 
 
-in the <head> of the document change the xhtml title of the document to match chapter-title
+in the head of the document change the xhtml title of the document to match chapter-title
 
 
-<Title> _____ Change title here ______ </title>
+Title _____ Change title here ______ title
 
 The title should match the chapter-title css property (See css stylesheet) 
 
@@ -88,7 +88,9 @@ untar resource.tar and move into dir above OEBPS
 edit file with data.txt to right information leave file where is until you run 08
 
 run 04-Silver-Line
+
 run 05-Silver-Line
+
 run 06-Silver-Line
 
 
