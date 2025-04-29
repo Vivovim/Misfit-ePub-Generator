@@ -31,7 +31,9 @@ create your text file with chapter markers
 in every place you want a new chapter including the first line of the file.
 
 run 01-Silver-Line YOURFILE.txt
+
 run 02-Silver-Line
+
 run 03-Silver-Line
 
 mkdir junk
