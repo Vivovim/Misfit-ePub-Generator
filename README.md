@@ -9,9 +9,9 @@ put .pl scripts in home bin directory and run from shell of choice.
 do not follow instructions as written use common sense when moving files
 basic unix understanding is required, if you know what your doing be safe.
 
-only works with utf-8
-straiten quotes
-zap gremlins
+only works with utf-8 data files.
+straiten quotes - make sure your data is clean 
+zap gremlins - make sure your data is clean
 make sure carriage returns are unix \n
 
 bbedit helps a lot.
@@ -20,14 +20,19 @@ every chapter must start with chapter number \n chapter-title \n followed by the
 
 Make sure that EVERY SINGLE " (double quote is closed with a match.) or edit code.
 
-mkdir BOOK_Name.dir
+mkdir YOURBOOK.dir
 
 
-create your text file with chapter markers ##-->Here! in every place you want a new chapter including the first line of the file.
+create your text file with chapter markers 
 
-run 01 filename.txt
-run 02
-run 03
+##-->Here! 
+
+
+in every place you want a new chapter including the first line of the file.
+
+run 01-Silver-Line YOURFILE.txt
+run 02-Silver-Line
+run 03-Silver-Line
 
 mkdir junk
 mv *.rad junk/.
@@ -43,7 +48,26 @@ mv contents of skeleton directory OEBPS into OEBPS
 
 mv contents of skeleton directory into dir without moving OEBPS
 
-edit each chapter html by hand in xhtml with the following
+edit each chapter xhtml by hand in xhtml with the following
+
+<p class="body-style">Chapter One</p>
+
+Change to:
+
+<p class="chapter-number">Chapter One</p>
+
+And. . .
+
+<p class="body-style">The Long Road Home</p>
+
+Change to:
+
+<p class="chapter-title">The Long Road Home</p>
+
+
+
+in the <head> of the document change the xhtml title of the document to match chapter-title
+
 
 <Title> _____ Change title here ______ </title>
 
@@ -61,9 +85,9 @@ untar resource.tar and move into dir above OEBPS
 
 edit file with data.txt to right information leave file where is until you run 08
 
-run 04
-run 05
-run 06
+run 04-Silver-Line
+run 05-Silver-Line
+run 06-Silver-Line
 
 
 put cover artwork as "Cover.jpg" in images directory. 
@@ -71,7 +95,7 @@ put cover artwork as "Cover.jpg" in images directory.
 make sure there are no other files in the dir besides mime-type, OEBPS, META-INF
 
 
-run 08 and put the name of the ePub file
+run 08-Silver-Line and put the name of the ePub file
 
 be sure to run ePub check on your file to make sure it's valid.
 
