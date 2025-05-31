@@ -150,7 +150,7 @@ if ($answer == "0") {
 	$titlepage = "Title.xhtml";
 	$copyright = "Copyright.xhtml";
 	$forward = "Forward.xhtml";
-	$toclistp	= "Table-Of-Contents.xhtml";
+	$toclistp	= "toc.xhtml";
 
 
 	push @xhtml, ($bookcover, $titlepage, $copyright, $toclistp, $forward);
@@ -162,7 +162,7 @@ if ($answer == "0") {
 	$copyright = "Copyright.xhtml";
 	$dedication = "Dedication.xhtml";
 	$forward = "Forward.xhtml";
-	$toclistp	= "Table-Of-Contents.xhtml";
+	$toclistp	= "toc.xhtml";
 
 	push @xhtml, ($bookcover, $titlepage, $copyright, $toclistp, $dedication, $forward);
 
@@ -174,7 +174,7 @@ if ($answer == "0") {
 	$copyright = "Copyright.xhtml";
 	$disclaimer = "Disclaimer.xhtml";
 	$forward = "Forward.xhtml";
-	$toclistp	= "Table-Of-Contents.xhtml";
+	$toclistp	= "toc.xhtml";
 
 	push @xhtml, ($bookcover, $titlepage, $copyright, $toclistp, $disclaimer, $forward);
 
@@ -206,6 +206,15 @@ foreach my $element (@data) {
 
 print FO '<meta property="dcterms:modified">' . $iso_time . '</meta>';
 
+print FO '<meta property="schema:accessMode">textual</meta>' . "\n";
+print FO '<meta property="schema:accessMode">visual</meta>' . "\n";
+print FO '<meta property="schema:accessModeSufficient">textual,visual</meta>' . "\n";
+print FO '<meta property="schema:accessModeSufficient">textual</meta>' . "\n";
+print FO '<meta property="schema:accessibilityHazard">none</meta>' . "\n";
+print FO '<meta property="schema:accessibilityFeature">tableOfContents</meta>' . "\n";
+print FO '<meta property="schema:accessibilityFeature">readingOrder</meta>' . "\n";
+print FO '<meta property="schema:accessibilitySummary">This EPUB Publication meets the requirements of the EPUB Accessibility specification with conformance to WCAG 2.0 Level AA. The publication is screen reader friendly.</meta>' . "\n";
+print FO '<link rel="dcterms:conformsTo" href="http://www.idpf.org/epub/a11y/accessibility-20170105.html#wcag-aa"/>' . "\n";
 
 
 
@@ -254,6 +263,7 @@ foreach my $itema (@xhtml) {
 	if ($ant eq "toc") {
 
 	print FO "<item id=\"" . $ant . "\" href=\"" . $itema . "\" media-type=\"application\/xhtml+xml\" properties=\"nav\" \/>\n";
+	push @spine, $ant;
 
 	} else {
 

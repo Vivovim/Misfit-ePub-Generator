@@ -131,7 +131,7 @@ foreach my $dat (@group) {
 	print FO '</head>' . "\n";
 	print FO '<body>' . "\n\n";
 	
-	print FO '<p class="chapter-title">Contents</p>' ."\n";
+#	print FO '<p class="chapter-title">Contents</p>' ."\n";
 
 	print FO ' <nav epub:type="toc" id="toc">';
 	print FO '<ol>';
@@ -141,6 +141,8 @@ foreach my $dat (@group) {
 	print FO '<li><a href="Title.xhtml">Title Page</a></li>' . "\n";
 
 	print FO '<li><a href="Copyright.xhtml">Copyright</a></li>' . "\n";
+
+	print FO '<li><a href="toc.xhtml">Table Of Contents</a></li>' . "\n";
 
 
 #	print FO '<p><a href="Dedication.xhtml">Dedication</a></p>' . "\n";

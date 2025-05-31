@@ -61,8 +61,13 @@ foreach my $file (@files) {
 	
 	
 	
+	my $CT = $data[1];
 
-	
+	if ($CT =~ /chapter-title/ ) {
+
+	$CT =~ s/<[^>]+>//g;
+
+	}	
 	
 	
 	
@@ -71,7 +76,7 @@ foreach my $file (@files) {
 
 
 	print FO '<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />' . "\n";
-	print FO '<title>' . $chapter_number . '</title>' . "\n";
+	print FO '<title>' . $CT . '</title>' . "\n";
 	print FO '<link href="stylesheet.css" rel="stylesheet" type="text/css" />' . "\n";
 
 	
