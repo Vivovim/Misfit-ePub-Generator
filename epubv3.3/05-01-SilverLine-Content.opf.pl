@@ -84,6 +84,7 @@ my $dedication = "";
 my $disclaimer = "";
 my $forward = "";
 my $toclistp = "";
+my $toc2	= "";
 
 if ($answer == "0") {
 
@@ -91,8 +92,9 @@ if ($answer == "0") {
 	$titlepage = "Title.xhtml";
 	$copyright = "Copyright.xhtml";
 	$toclistp	= "toc.xhtml";
+	$toc2		= "toc2.xhtml";
 
-	push @xhtml, ($bookcover, $titlepage, $copyright, $toclistp);
+	push @xhtml, ($bookcover, $titlepage, $copyright, $toclistp, $toc2);
 
 
 
@@ -105,8 +107,9 @@ if ($answer == "0") {
 	$copyright = "Copyright.xhtml";
 	$dedication = "Dedication.xhtml";
 	$toclistp	= "toc.xhtml";
+	$toc2		= "toc2.xhtml";
 
-	push @xhtml, ($bookcover, $titlepage, $copyright, $toclistp, $dedication);
+	push @xhtml, ($bookcover, $titlepage, $copyright, $toclistp, $toc2, $dedication);
 
 
 } elsif ($answer == "2") {
@@ -118,8 +121,9 @@ if ($answer == "0") {
 	$dedication = "Dedication.xhtml";
 	$disclaimer = "Disclaimer.xhtml";
 	$toclistp	= "toc.xhtml";
+	$toc2		= "toc2.xhtml";
 
-	push @xhtml, ($bookcover, $titlepage, $copyright, $toclistp, $dedication, $disclaimer);
+	push @xhtml, ($bookcover, $titlepage, $copyright, $toclistp, $toc2, $dedication, $disclaimer);
 
 
 } elsif ($answer == "3") {
@@ -131,8 +135,9 @@ if ($answer == "0") {
 	$disclaimer = "Disclaimer.xhtml";
 	$forward = "Forward.xhtml";
 	$toclistp	= "toc.xhtml";
+	$toc2		= "toc2.xhtml";
 
-	push @xhtml, ($bookcover, $titlepage, $copyright, $toclistp, $dedication, $disclaimer, $forward);
+	push @xhtml, ($bookcover, $titlepage, $copyright, $toclistp, $toc2, $dedication, $disclaimer, $forward);
 
 
 } elsif ($answer == "4") {
@@ -141,8 +146,9 @@ if ($answer == "0") {
 	$copyright = "Copyright.xhtml";
 	$disclaimer = "Disclaimer.xhtml";
 	$toclistp	= "toc.xhtml";
+	$toc2		= "toc2.xhtml";
 
-	push @xhtml, ($bookcover, $titlepage, $copyright, $toclistp, $disclaimer);
+	push @xhtml, ($bookcover, $titlepage, $copyright, $toclistp, $toc2, $disclaimer);
 	
 
 } elsif ($answer == "5") {
@@ -151,9 +157,10 @@ if ($answer == "0") {
 	$copyright = "Copyright.xhtml";
 	$forward = "Forward.xhtml";
 	$toclistp	= "toc.xhtml";
+	$toc2		= "toc2.xhtml";
 
 
-	push @xhtml, ($bookcover, $titlepage, $copyright, $toclistp, $forward);
+	push @xhtml, ($bookcover, $titlepage, $copyright, $toclistp, $toc2, $forward);
 
 
 } elsif ($answer == "6") {
@@ -163,8 +170,9 @@ if ($answer == "0") {
 	$dedication = "Dedication.xhtml";
 	$forward = "Forward.xhtml";
 	$toclistp	= "toc.xhtml";
+	$toc2		= "toc2.xhtml";
 
-	push @xhtml, ($bookcover, $titlepage, $copyright, $toclistp, $dedication, $forward);
+	push @xhtml, ($bookcover, $titlepage, $copyright, $toclistp, $toc2, $dedication, $forward);
 
 
 } elsif ($answer == "7") {
@@ -175,8 +183,9 @@ if ($answer == "0") {
 	$disclaimer = "Disclaimer.xhtml";
 	$forward = "Forward.xhtml";
 	$toclistp	= "toc.xhtml";
+	$toc2		= "toc2.xhtml";
 
-	push @xhtml, ($bookcover, $titlepage, $copyright, $toclistp, $disclaimer, $forward);
+	push @xhtml, ($bookcover, $titlepage, $copyright, $toclistp, $toc2, $disclaimer, $forward);
 
 
 }
@@ -211,7 +220,7 @@ print FO '<meta property="schema:accessMode">visual</meta>' . "\n";
 print FO '<meta property="schema:accessModeSufficient">textual,visual</meta>' . "\n";
 print FO '<meta property="schema:accessModeSufficient">textual</meta>' . "\n";
 print FO '<meta property="schema:accessibilityHazard">none</meta>' . "\n";
-print FO '<meta property="schema:accessibilityFeature">tableOfContents</meta>' . "\n";
+# print FO '<meta property="schema:accessibilityFeature">tableOfContents</meta>' . "\n";
 print FO '<meta property="schema:accessibilityFeature">readingOrder</meta>' . "\n";
 print FO '<meta property="schema:accessibilitySummary">This EPUB Publication meets the requirements of the EPUB Accessibility specification with conformance to WCAG 2.0 Level AA. The publication is screen reader friendly.</meta>' . "\n";
 print FO '<link rel="dcterms:conformsTo" href="http://www.idpf.org/epub/a11y/accessibility-20170105.html#wcag-aa"/>' . "\n";
@@ -263,12 +272,22 @@ foreach my $itema (@xhtml) {
 	if ($ant eq "toc") {
 
 	print FO "<item id=\"" . $ant . "\" href=\"" . $itema . "\" media-type=\"application\/xhtml+xml\" properties=\"nav\" \/>\n";
+#		my $setx = "toc2.xhtml";
+
+#	push @spine, $setx;
+
+	} elsif ($ant eq "toc2") {
+
+
+	print FO "<item id=\"" . $ant . "\" href=\"" . $itema . "\" media-type=\"application\/xhtml+xml\" \/>\n";
 	push @spine, $ant;
+
+
+
 
 	} else {
 
 	print FO "<item id=\"" . $ant . "\" href=\"" . $itema . "\" media-type=\"application\/xhtml+xml\" \/>\n";
-
 	push @spine, $ant;
 	}
 }

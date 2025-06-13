@@ -98,7 +98,7 @@ foreach my $dat (@group) {
 
 	my @data = @uniq;
 
-	my $dataout	= "toc.xhtml";
+	my $dataout	= "toc2.xhtml";
 
 
 	my $out_FILE = $dataout;
@@ -134,7 +134,7 @@ foreach my $dat (@group) {
 #	print FO '<p class="chapter-title">Contents</p>' ."\n";
 
 	print FO ' <nav epub:type="toc" id="toc">';
-	print FO '<ol>';
+	print FO '<ul>';
 
 	
 
@@ -142,7 +142,7 @@ foreach my $dat (@group) {
 
 	print FO '<li><a href="Copyright.xhtml">Copyright</a></li>' . "\n";
 
-	print FO '<li><a href="toc.xhtml">Table Of Contents</a></li>' . "\n";
+	print FO '<li><a href="toc2.xhtml">Table Of Contents</a></li>' . "\n";
 
 
 #	print FO '<p><a href="Dedication.xhtml">Dedication</a></p>' . "\n";
@@ -160,7 +160,7 @@ foreach my $item (@data) {
 
 
 
-print FO '</ol>';
+print FO '</ul>';
 
 print FO '</nav>';
 
